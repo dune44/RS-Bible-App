@@ -99,7 +99,7 @@ describe( 'Create a Hebrew Word', () => {
   });
 
   it( 'createNewWordResponse.result.Number should be a Number', () => {
-    expect( createNewWordResponse.result._id ).to.be.a( 'Number' );
+    expect( createNewWordResponse.result.Number ).to.be.a( 'Number' );
   });
 
   // Return Value
