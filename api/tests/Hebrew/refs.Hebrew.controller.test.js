@@ -48,27 +48,28 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse ).to.not.have.property( 'error' );
   });
 
-  it( 'Should conntain property "result" ', () => {
+  it( 'Should contain property "result" ', () => {
     expect( createNewWordResponse ).to.have.property( 'result' );
   });
 
-  it( 'Should conntain property "result.Number" ', () => {
+  it( 'Should contain property "result.Number" ', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Number' );
   });
 
-  it( 'Should conntain property "result.Original" ', () => {
+  it( 'Should contain property "result.Original" ', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Original' );
   });
 
-  it( 'Should conntain property "result.Phonetic" ', () => {
+  it( 'Should contain property "result.Phonetic" ', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Phonetic' );
   });
 
-  it( 'Should NOT conntain property "result.Roots" ', () => {
-    expect( createNewWordResponse.result ).to.not.have.property( 'Roots' );
+  it( 'Should cnntain property "result.Roots" ', () => {
+      expect( createNewWordResponse.result ).to.have.property( 'Roots' );
+      expect( createNewWordResponse.result ).to.have.lengthOf( 0 );
   });
 
-  it( 'Should conntain property "result.Transliteration" ', () => {
+  it( 'Should contain property "result.Transliteration" ', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Transliteration' );
   });
 
