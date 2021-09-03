@@ -64,14 +64,16 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Phonetic' );
   });
 
-  it( 'Should cnntain property "result.Roots" ', () => {
+  it( 'Should contain property "result.Roots"', () => {
       expect( createNewWordResponse.result ).to.have.property( 'Roots' );
-      expect( createNewWordResponse.result ).to.have.lengthOf( 0 );
   });
 
   it( 'Should contain property "result.Transliteration" ', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Transliteration' );
   });
 
+  it( ' "result.Roots" should have length of 0 ', () => {
+    expect( createNewWordResponse.result.Roots ).to.have.lengthOf( 0 );
+  });
 
 });
