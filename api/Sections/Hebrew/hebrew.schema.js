@@ -8,7 +8,8 @@ const schema = new Schema({
   Roots: [ Numbers ],
   Transliteration: String,
   Definitions: [ String ],
-  Phrases: [ String ]
+  Phrases: [ String ],
+  Primitive: Boolean
 });
 
 module.exports = mongoose.model( "hebrew", schema );

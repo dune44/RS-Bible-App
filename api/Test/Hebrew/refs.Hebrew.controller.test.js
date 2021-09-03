@@ -8,12 +8,13 @@ describe( 'Create a Hebrew Word', () => {
   const createNewWord = async () => {
     try {
       const Number = 1;
-      const Original = '';
-      const Phonetic = '';
-      const Roots = [ 1 ];
-      const Transliteration = '';
-      const Definitions = [ '' ];
-      const Phrases = [ '' ];
+      const Original = 'אָב';
+      const Phonetic = 'awb';
+      // const Roots = [];  First word lacks a root.
+      const Transliteration = 'ab';
+      const Definitions = [ 'father' ];
+      const Phrases = [ 'chief', 'fore-father', 'father', 'fatherless', 'patrimony', 'principal' ];
+      const Primitive = true;
 
       createNewWordResponse = await refController.Create.Hebrew(
         Number,
@@ -22,7 +23,8 @@ describe( 'Create a Hebrew Word', () => {
         Roots,
         Transliteration,
         Definitions,
-        Phrases
+        Phrases,
+        Primitive
       );
     } catch ( error ) {
       createNewWordResponse = { error };

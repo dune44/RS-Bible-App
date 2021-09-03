@@ -8,7 +8,7 @@ const versions = require( './versions.schema' );
      Book: ( name, position ) => {
 
      },
-     Hebrew: async ( Number, Original, Roots, Transliteration, Definitions, Phrases ) => {
+     Hebrew: async ( Number, Original, Roots, Transliteration, Definitions, Phrases, Primitive ) => {
       try {
         let newWord = { Number };
         if ( Original ) newWord.Original = Original;
@@ -16,6 +16,8 @@ const versions = require( './versions.schema' );
         if ( Transliteration ) newWord.Transliteration = Transliteration;
         if ( Definitions ) newWord.Definitions = Definitions;
         if ( Phrases ) newWord.Phrases = Phrases;
+        if ( Primitive ) newWord.Primitive = Primitive;
+        else newWord.Primitive = false;
 
         const data = new hebrew( newWord );
         const result = await  data.save();
