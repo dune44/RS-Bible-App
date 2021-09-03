@@ -76,7 +76,9 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Definitions' );
   });
   
-
+  it( 'Should contain property "result.Phrases" ', () => {
+    expect( createNewWordResponse.result ).to.have.property( 'Phrases' );
+  });
 
 
 
