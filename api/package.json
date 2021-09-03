@@ -1,13 +1,13 @@
 {
   "name": "api",
   "version": "1.0.0",
-  "description": "",
+  "author": "Richard Silence",
+  "description": " A Bible app for looking at the words used and there translations with a mechanism to retranslate using more modern verbiage.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha tests --recursive  --exit"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "devDependencies": {
     "chai": "^4.3.4",
