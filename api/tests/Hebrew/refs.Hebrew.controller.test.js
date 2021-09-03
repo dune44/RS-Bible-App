@@ -49,12 +49,12 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse ).to.not.have.property( 'error' );
   });
 
-  it( 'Should contain property "result._id" ', () => {
-    expect( createNewWordResponse.result ).to.have.property( '_id' );
-  });
-
   it( 'Should contain property "result" ', () => {
     expect( createNewWordResponse ).to.have.property( 'result' );
+  });
+
+  it( 'Should contain property "result._id" ', () => {
+    expect( createNewWordResponse.result ).to.have.property( '_id' );
   });
 
   it( 'Should contain property "result.Number" ', () => {
@@ -96,6 +96,10 @@ describe( 'Create a Hebrew Word', () => {
 
   it( 'createNewWordResponse.result._id should be a Object', () => {
     expect( createNewWordResponse.result._id ).to.be.a( 'Object' );
+  });
+
+  it( 'createNewWordResponse.result.Number should be a Number', () => {
+    expect( createNewWordResponse.result._id ).to.be.a( 'Number' );
   });
 
   // Return Value
