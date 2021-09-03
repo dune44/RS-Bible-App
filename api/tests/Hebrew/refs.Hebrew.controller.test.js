@@ -80,7 +80,9 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Phrases' );
   });
 
-
+  it( 'Should contain property "result.Primitive" ', () => {
+    expect( createNewWordResponse.result ).to.have.property( 'Primitive' );
+  });
 
 
   it( ' "result.Roots" should have length of 0 ', () => {
