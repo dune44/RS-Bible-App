@@ -1,0 +1,17 @@
+{
+  "name": "bible-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "cd api && nodemon",
+    "fe": "cd fe && npm run dev",
+    "start": "concurrently \"npm run fe\" \"npm run api\" "
+  },
+  "dependencies": {
+    "concurrently": "6.2.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
