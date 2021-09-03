@@ -44,8 +44,13 @@ describe( 'Create a Hebrew Word', () => {
     done();
   });
 
+  // Property Existence
   it( 'Should NOT contain property error', () => {
     expect( createNewWordResponse ).to.not.have.property( 'error' );
+  });
+
+  it( 'Should contain property "_id" ', () => {
+    expect( createNewWordResponse ).to.have.property( '_id' );
   });
 
   it( 'Should contain property "result" ', () => {
@@ -85,6 +90,8 @@ describe( 'Create a Hebrew Word', () => {
   });
 
 
+
+  // Return Value
   it( ' "result.Roots" should have length of 0 ', () => {
     expect( createNewWordResponse.result.Roots ).to.have.lengthOf( 0 );
   });
