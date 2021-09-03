@@ -68,4 +68,9 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse.result ).to.not.have.property( 'Roots' );
   });
 
+  it( 'Should conntain property "result.Transliteration" ', () => {
+    expect( createNewWordResponse.result ).to.have.property( 'Transliteration' );
+  });
+
+
 });
