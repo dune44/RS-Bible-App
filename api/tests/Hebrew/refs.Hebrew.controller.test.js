@@ -60,4 +60,8 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Original' );
   });
 
+  it( 'Should conntain property "result.Phonetic" ', () => {
+    expect( createNewWordResponse.result ).to.have.property( 'Phonetic' );
+  });
+
 });
