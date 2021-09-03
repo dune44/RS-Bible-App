@@ -44,8 +44,12 @@ describe( 'Create a Hebrew Word', () => {
     done();
   });
 
-  it( 'Create Hebrew Should NOT contain property error', () => {
+  it( 'Should NOT contain property error', () => {
     expect( createNewWordResponse ).to.not.have.property( 'error' );
+  });
+
+  it( 'Should conntain property "result" ', () => {
+    expect( createNewWordResponse ).to.have.property( 'result' );
   });
 
 });
