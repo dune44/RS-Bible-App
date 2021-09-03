@@ -56,4 +56,8 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Number' );
   });
 
+  it( 'Should conntain property "result.Original" ', () => {
+    expect( createNewWordResponse.result ).to.have.property( 'Original' );
+  });
+
 });
