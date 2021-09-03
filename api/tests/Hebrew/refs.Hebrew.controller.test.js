@@ -72,6 +72,15 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse.result ).to.have.property( 'Transliteration' );
   });
 
+  it( 'Should contain property "result.Definitions" ', () => {
+    expect( createNewWordResponse.result ).to.have.property( 'Definitions' );
+  });
+  
+
+
+
+
+
   it( ' "result.Roots" should have length of 0 ', () => {
     expect( createNewWordResponse.result.Roots ).to.have.lengthOf( 0 );
   });
