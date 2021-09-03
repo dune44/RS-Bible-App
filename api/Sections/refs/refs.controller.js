@@ -8,6 +8,22 @@ const versions = require( './versions.schema' );
      Book: ( name, position ) => {
 
      },
+     Hebrew: async ( Number, Original, Roots, Transliteration, Definitions, Phrases ) => {
+      try {
+        let newWord = { Number };
+        if( Original ) newWord.Original = Original;
+        if ( Roots ) newWord.Roots = Roots.split( ' ' );
+        if ( Transliteration ) newWord.Transliteration = Transliteration;
+        if ( Definitions ) newWord.Definitions = Definitions;
+        if ( Phrases ) newWord.Phrases = Phrases;
+
+        const data = new hebrew( newWord );
+        const result = await  data.save();
+        return { result };
+      } catch (error) {
+        return { error };
+      }
+     },
      Verse: ( book, chapter, verse ) => {
 
      },
