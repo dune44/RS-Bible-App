@@ -49,8 +49,8 @@ describe( 'Create a Hebrew Word', () => {
     expect( createNewWordResponse ).to.not.have.property( 'error' );
   });
 
-  it( 'Should contain property "_id" ', () => {
-    expect( createNewWordResponse ).to.have.property( '_id' );
+  it( 'Should contain property "result._id" ', () => {
+    expect( createNewWordResponse.result ).to.have.property( '_id' );
   });
 
   it( 'Should contain property "result" ', () => {
@@ -93,6 +93,7 @@ describe( 'Create a Hebrew Word', () => {
   it( 'createNewWordResponse.result should be an Object', () => {
     expect( createNewWordResponse.result ).to.be.a( 'Object' );
   });
+
 
   // Return Value
   it( ' "result.Roots" should have length of 0 ', () => {
