@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "api": "cd api && nodemon",
+    "apiTest": "cd api && npm run test",
     "fe": "cd fe && npm run dev",
-    "start": "concurrently \"npm run fe\" \"npm run api\" "
+    "start": "concurrently \"npm run fe\" \"npm run api\" ",
+    "test": "concurrently \" npm run apiTest\" "
   },
   "dependencies": {
     "concurrently": "6.2.1"

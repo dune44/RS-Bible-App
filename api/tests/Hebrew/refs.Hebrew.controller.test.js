@@ -1,3 +1,4 @@
+require( './../fixtures/db' );
 const chai = require('chai');
 const expect = chai.expect;
 
@@ -10,7 +11,7 @@ describe( 'Create a Hebrew Word', () => {
       const Number = 1;
       const Original = 'אָב';
       const Phonetic = 'awb';
-      // const Roots = [];  First word lacks a root.
+      // const Roots = [];  First word 'ab' lacks a root.
       const Transliteration = 'ab';
       const Definitions = [ 'father' ];
       const Phrases = [ 'chief', 'fore-father', 'father', 'fatherless', 'patrimony', 'principal' ];
